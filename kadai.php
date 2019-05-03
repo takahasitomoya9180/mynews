@@ -6,7 +6,7 @@ echo $a+$b;
 $array_month=['㋀','㋁','㋂','㋃','㋄','㋅','㋆','㋇','㋈','㋉','㋊','㋋'];
 echo $array_month[7];
 
-
+$hello="Hello,";
 $name="tomoya";
 $world="'s World!";
 echo $hello.$name.$world;

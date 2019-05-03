@@ -1,10 +1,10 @@
 <?php
   $name="智弥";
   
-  if ($name=="智弥"){
-      echo "私はあなたの名前です";
-  }else if($name!= "智弥"){
-      echo "あなたの名前ではありません";
+  if ($name ==="智弥"){
+      echo "私は智弥です";
+  }else if($name !== "智弥"){
+      echo "智弥ではありません";
   }
   
   
