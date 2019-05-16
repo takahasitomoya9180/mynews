@@ -24,7 +24,7 @@ Route::get('/', function () {
 
 //課題４
 Route::group(['prefix' => 'admin'],function(){
-     Route::get('plofile/create','admin/ProfileController@add');
-     Route::get('plofile/edit','admin/ ProfileController@edit');
+     Route::get('plofile/create','Admin/ProfileController@add');
+     Route::get('plofile/edit','Admin/ ProfileController@edit');
      
 } );
