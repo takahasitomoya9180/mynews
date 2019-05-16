@@ -14,7 +14,7 @@
 */
 //課題３「http://XXXXXX.jp/XXX というアクセスが来たときに、 AAAControllerのbbbというAction に渡すRoutingの設定です
 Route::group(["prefix"=>"xxx"],function(){
-    Route::get('AAAController@bbb');
+    Route::get('/','AAAController@bbb');
 });
 
 Route::get('/', function () {
@@ -24,7 +24,7 @@ Route::get('/', function () {
 
 //課題４
 Route::group(['prefix' => 'admin'],function(){
-     Route::get('plofile/create','admin/ProfileControlle@add');
-     Route::get('plofile/edit','admin/ ProfileControlle@edit');
+     Route::get('plofile/create','admin/ProfileController@add');
+     Route::get('plofile/edit','admin/ ProfileController@edit');
      
 } );
