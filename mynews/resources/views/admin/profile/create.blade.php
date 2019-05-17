@@ -1,13 +1,52 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+{{-- layouts/admin.blade.phpを読み込む --}}
+@extends('layouts.admin')
 
-        <title>リーンゲインズ</title>
-    </head>
-    <body>
-        <h1>痩せる！美肌！今すぐ手に入る美モテBODY!!</h1>
-    </body>
-</html>
+
+{{-- admin.blade.phpの@yield('title')に'ニュースの新規作成'を埋め込む --}}
+@section('title', 'my profile')
+
+{{-- admin.blade.phpの@yield('content')に以下のタグを埋め込む --}}
+@section('content')
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <h1>Githubにpushするために色々試したらファイルが消去されてオワタ＼(^o^)／</h1>
+                 <h2>そんなことよりHIITが最高な３つのメリットについて</h2>
+                <ol>
+                    <li>短時間で追い込む時短トレーニングで心肺機能が向上（疲れにくくなる）</li>
+                    <li>運動後の脂肪燃焼効果「アフターバーン効果」がある</li>
+                    <li>基礎代謝が上がり痩せやすく、太りにくい体になる</li>
+                </ol> 
+                    
+                    <p>
+                    以上のうち、特に３つ目が一番大事！
+                    そもそも「基礎代謝」とはなんぞ？？
+                    人間は何もしていない状態でもカロリーを消費します。<br>
+                    この何もしなくても消費されるカロリーを「基礎代謝」といいます（最高かよ）<br>
+                    つまり、基礎代謝が増えれば痩せやすく太りにくくなるがじゃあどうすれば増えるのか？
+                    </p>
+                    <p>
+                      結論からいうとズバリ<strong>筋肉量を増やすと基礎代謝は上がります。</strong>特に大きな筋肉を増やすと効果大！（太ももなど下半身が筋肉が多い部位）<br>
+                    筋肉は維持するだけでかなりのエネルギーを必要とします。
+                    筋肉が増えれば増えるほど維持するためにエネルギーが消費され結果的に基礎代謝が増えます
+                    </p>
+                    <p>
+                         HIITは短時間で脂肪を燃やしながら全身の筋肉を鍛えてくれて綺麗なボディーラインを作るメニューになっています。<br>
+                    目に見えて体の変化が分かり、今からでも全然夏に間に合うHIITトレーニング<br>
+                    今年の夏はこれでリア充の仲間入り！<strong>LET’Sひと夏のアバンチュール！</strong>（あふれ出る昭和感）
+                    
+                    
+                        
+                    </p>
+                   
+                    
+                    
+                
+                
+                
+                
+               
+            </div>
+        </div>
+    </div>
+@endsection
