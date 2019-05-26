@@ -10,43 +10,46 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8 mx-auto">
-                <h1>Githubにpushするために色々試したらファイルが消去されてオワタ＼(^o^)／</h1>
-                 <h2>そんなことよりHIITが最高な３つのメリットについて</h2>
-                <ol>
-                    <li>短時間で追い込む時短トレーニングで心肺機能が向上（疲れにくくなる）</li>
-                    <li>運動後の脂肪燃焼効果「アフターバーン効果」がある</li>
-                    <li>基礎代謝が上がり痩せやすく、太りにくい体になる</li>
-                </ol> 
+                <h2>my profile</h2>
+                <form action="{{ action('Admin\ProfileController@create') }}" method="post" enctype="multipart/form-data">
                     
-                    <p>
-                    以上のうち、特に３つ目が一番大事！
-                    そもそも「基礎代謝」とはなんぞ？？
-                    人間は何もしていない状態でもカロリーを消費します。<br>
-                    この何もしなくても消費されるカロリーを「基礎代謝」といいます（最高かよ）<br>
-                    つまり、基礎代謝が増えれば痩せやすく太りにくくなるがじゃあどうすれば増えるのか？
-                    </p>
-                    <p>
-                      結論からいうとズバリ<strong>筋肉量を増やすと基礎代謝は上がります。</strong>特に大きな筋肉を増やすと効果大！（太ももなど下半身が筋肉が多い部位）<br>
-                    筋肉は維持するだけでかなりのエネルギーを必要とします。
-                    筋肉が増えれば増えるほど維持するためにエネルギーが消費され結果的に基礎代謝が増えます
-                    </p>
-                    <p>
-                         HIITは短時間で脂肪を燃やしながら全身の筋肉を鍛えてくれて綺麗なボディーラインを作るメニューになっています。<br>
-                    目に見えて体の変化が分かり、今からでも全然夏に間に合うHIITトレーニング<br>
-                    今年の夏はこれでリア充の仲間入り！<strong>LET’Sひと夏のアバンチュール！</strong>（あふれ出る昭和感）
+                    @if(count($errors) >0)
+                    <ul>
+                        @foreach($errors->all() as $e)
+                        <li>{{ $e }}</li>
+                        @endforeach
+                    </ul>
+                    @endif
+                    <div class="form-group row">
+                        <label class="col-md-2" for="name">氏名</label>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" name="name" value="{{ old('name')}}">
+                        </div>
+                    </div>
+                   <div
+                    <div class="form-group row">
+                        <label class="col-md-2" for="gender">性別</label>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" name="gender" value="{{ old('gender')}}">
+                        </div>
+                    </div>
                     
+                    <div class="form-group row">
+                        <lavel class="col-md-2" for="hobby">趣味</lavel>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" name="hobby" value="{{ old('hobby')}}">
+                        </div>
+                    </div>
                     
-                        
-                    </p>
-                   
-                    
-                    
-                
-                
-                
-                
-               
-            </div>
+                    <div class="form-group row">
+                        <lavel class="col-md-2" for="introduction">自己紹介</lavel>
+                        <div class="col-md-10">
+                            <textarea class="form-control" name="introduction"　rows="20">{{ old('introduction') }}</textarea>
+                            
+                        </div>
+                    </div>
+                </form>
+                 
         </div>
     </div>
 @endsection
