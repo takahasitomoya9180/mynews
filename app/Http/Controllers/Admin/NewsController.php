@@ -17,12 +17,12 @@ class NewsController extends Controller
     
     public function create(Request $request)
     {
-        $this->validate($request,　News::$rules);
+        $this->validate($request, News::$rules);
         
         $news = new News;
         $form = $request->all();
         
-        if(isset($form「['image'])){
+        if(isset($form['image'])){
             $path = $request->file('image')->store('public/image');
             $news->image_path = baseneme($path);
         } else {
@@ -30,7 +30,7 @@ class NewsController extends Controller
         }
         
         unset($form['_token']);
-        unset($from['image']);
+        unset($form['image']);
         
         $news->fill($form);
         $news->save();
