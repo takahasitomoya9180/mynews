@@ -28,7 +28,7 @@
                   <div class="form-group row">
                       <lavel class="col-md-2" for="gender">性別</lavel>
                     <div class="col-md-10">
-                        <input type="text" class="form-control" name="gender" value="{{ $profile_form->gender }}">
+                        <input type="radio" class="form-control" name="gender" value="{{ $profile_form->gender }}">
                     </div>  
                   </div>
                   <div class="form-group row">

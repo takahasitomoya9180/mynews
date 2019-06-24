@@ -48,6 +48,7 @@ class ProfileController extends Controller
       $profile = Profile::find($request->id);
       //送信されてきたフォームデータを格納する
       $profile_form = $request->all();
+      
       unset($profile_form['_token']);
       
       // 該当するデータを上書きして保存
