@@ -29,9 +29,12 @@ Route::group(['prefix' => 'admin','middleware' => 'auth'], function() {
     Route::post('profile/edit','Admin\ProfileController@update')->middleware('auth');
     Route::get('profile/delete','Admin\ProfileController@delete')->middleware('auth');
     
-    //PHP/Laravel18　一般ユーザーが読むニュースサイト
-    Route::get('/', 'NewsController@index');
+    
 });
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+//PHP/Laravel18　一般ユーザーが読むニュースサイト
+    Route::get('/', 'NewsController@index');
