@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
-
+use Log;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -33,10 +33,11 @@ class ProfileController extends Controller
       
       $profile = new profile;
       $form = $request->all();
-      
+      $profile->gender = $request->gender;
       unset($form['_token']);
-      
       $profile->fill($form);
+     
+    
       $profile->save();
       
       return redirect('admin/profile/create');

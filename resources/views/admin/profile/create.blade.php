@@ -26,13 +26,11 @@
                             <input type="text" class="form-control" name="name" value="{{ old('name')}}">
                         </div>
                     </div>
-                   <div
+                   <div>
                     <div class="form-group row">
-                        <label class="col-md-2" for="gender">性別</label>
+                        <label class="checkbox-inline" for="gender">性別</label>
                         <div class="col-md-10">
-                            <input type="radio" class="form-control" name="gender" value="{{ old('gender')}}" checked>男
-                             <input type="radio" class="form-control" name="gender" value="{{ old('gender')}}" >女
-                            
+                           <input type="text" class="form-control" name="gender" value="{{ old("gender") }}">
                         </div>
                     </div>
                     
@@ -47,7 +45,7 @@
                         <lavel class="col-md-2" for="introduction">自己紹介</lavel>
                         <div class="col-md-10">
                             <textarea class="form-control" name="introduction"　rows="20">{{ old('introduction') }}</textarea>
-                            
+                            </div>
                             {{ csrf_field() }}
                     <div class="form-group row">
                         <div class="col-md-2"></div>
@@ -57,7 +55,6 @@
                         </div>
                     </div>
                 </form>
-                 
         </div>
     </div>
 @endsection
