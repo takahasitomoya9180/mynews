@@ -33,7 +33,7 @@
                            <input type="text" class="form-control" name="gender" value="{{ old("gender") }}">
                         </div>
                     </div>
-                    
+                    </div>
                     <div class="form-group row">
                         <lavel class="col-md-2" for="hobby">趣味</lavel>
                         <div class="col-md-10">
@@ -45,6 +45,7 @@
                         <lavel class="col-md-2" for="introduction">自己紹介</lavel>
                         <div class="col-md-10">
                             <textarea class="form-control" name="introduction"　rows="20">{{ old('introduction') }}</textarea>
+                            </div>
                             </div>
                             {{ csrf_field() }}
                     <div class="form-group row">
