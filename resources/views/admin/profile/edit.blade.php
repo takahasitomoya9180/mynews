@@ -28,12 +28,20 @@
                   <div class="form-group row">
                       <lavel class="col-md-2" for="gender">性別</lavel>
                     <div class="col-md-10">
-                       <input type="text" class="form-control" name="gender" value="{{ old('gender') }}">
+                      <div class="radio-inline">
+                          <input type="radio" value="男" name="gender" id="man" {{ $profile_form->gender=="男" ? "checked" : "" }}>
+                          <label for="man">男性</label>
+                      </div>
+                      <div class="radio-inline">
+                        <input type="radio" value="女" name="gender" id="woman" {{ $profile_form->gender=="女" ? "checked" : "" }}>
+                        <label for="woman">女性</label>
+                      </div>
                     </div>  
                   </div>
                   <div class="form-group row">
                       <lavel class="col-md-2" for="hobby">趣味</lavel>
                   <div class="col-md-2">
+                    
                       <input type="text" class="form-control" name="hobby" value="{{ $profile_form->hobby }}">
                   </div>  
                  </div>

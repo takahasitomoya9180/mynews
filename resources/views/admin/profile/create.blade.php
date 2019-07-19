@@ -26,13 +26,18 @@
                             <input type="text" class="form-control" name="name" value="{{ old('name')}}">
                         </div>
                     </div>
-                   <div>
                     <div class="form-group row">
-                        <label class="checkbox-inline" for="gender">性別</label>
+                        <label class="checkbox-inline col-md-2" for="gender">性別</label>
                         <div class="col-md-10">
-                           <input type="text" class="form-control" name="gender" value="{{ old("gender") }}">
+                            <div class="radio-inline">
+                              <input type="radio" value="男" name="gender" id="man" {{ old("gender")=="男" ? "checked" : "" }}>
+                              <label for="man">男性</label>
+                            </div>
+                            <div class="radio-inline">
+                                <input type="radio" value="女" name="gender" id="woman" {{ old("gender")=="女" ? "checked" : "" }}>
+                                <label for="woman">女性</label>
+                            </div>
                         </div>
-                    </div>
                     </div>
                     <div class="form-group row">
                         <lavel class="col-md-2" for="hobby">趣味</lavel>
