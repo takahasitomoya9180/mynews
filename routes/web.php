@@ -32,9 +32,11 @@ Route::group(['prefix' => 'admin','middleware' => 'auth'], function() {
     
 });
 
-Auth::routes();
+    Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+    Route::get('/home', 'HomeController@index')->name('home');
 
-//PHP/Laravel18　一般ユーザーが読むニュースサイト
+    //PHP/Laravel18　一般ユーザーが読むニュースサイト
     Route::get('/', 'NewsController@index');
+    Route::get('profile','NewsController@profile');
+   

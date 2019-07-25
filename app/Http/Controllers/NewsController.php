@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\HTML;
 
 //追記
 use App\News;
+use App\profile;
 
 class NewsController extends Controller
 {
@@ -39,6 +40,13 @@ class NewsController extends Controller
     
     public function profile(Request $request)
     {
-        
+          $profile = Profile::find($request->id);
+      
+      
+      if (empty($profile)) {
+
+          abort(404);
+      }
+      return view('news.profile',['profile_form' => $profile]);
     }
 }
