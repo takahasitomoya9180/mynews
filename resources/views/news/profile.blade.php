@@ -11,7 +11,6 @@
         <div class="row">
             <div class="col-md-8 mx-auto">
                 <h2>My profile</h2>
-                
                     <div class="form-group row">
                         <lavel class="col-md-2" for="name">氏名</lavel>
                     <div class="col-md-10">
